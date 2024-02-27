@@ -1,25 +1,34 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
-    namespace 'com.example.dinter'
-    compileSdk 34
+    namespace 'com.mon.pet.translator'
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.dinter"
+        applicationId "com.mon.pet.translator"
         minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
-
+        targetSdk 33
+        versionCode 8
+        versionName "1.6.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures{
+        buildConfig = true
+    }
+    viewBinding {
+        enabled = true
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -28,12 +37,30 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-crashlytics:18.6.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.airbnb.android:lottie:6.1.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.27'
+    implementation group: 'com.github.st-h', name: 'TarsosDSP', version: '2.4.1'
+    implementation 'io.github.florent37:shapeofview:1.4.7'
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+    implementation 'com.github.tunadodev:MKAdsLibrary:1.0.8'
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }

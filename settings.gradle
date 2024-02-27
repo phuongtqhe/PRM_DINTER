@@ -10,8 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://sdk-download.airbridge.io/maven" }
     }
 }
 
-rootProject.name = "Dinter"
+rootProject.name = "Pet Voice Translator Simulator"
 include ':app'

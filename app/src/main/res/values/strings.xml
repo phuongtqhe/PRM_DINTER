@@ -1,3 +1,281 @@
 <resources>
-    <string name="app_name">Dinter</string>
+    <string name="app_name">Dog &amp; Cat Translator Sound</string>
+
+    <string name="func_start">Start</string>
+    <string name="cat_t">Cat</string>
+    <string name="dog_t">Dog</string>
+    <string name="funny_voice_cats">Funny voice cats</string>
+    <string name="funny_voice_dog">Funny voice dog</string>
+    <string name="long_press_record_human_voice">Long press to record Yours~</string>
+    <string name="record_time_is_too_short">Recognition failed as recording time was too short</string>
+    <string name="volume_is_too_low">Recognition failed as the volume was too low</string>
+    <string name="language_t">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">Hindi</string>
+    <string name="language_spanish">Spanish</string>
+    <string name="language_french">French</string>
+    <string name="language_portuguese">Portuguese</string>
+    <string name="pets_translator">Pets Translator</string>
+    <string name="translate_t">Translate</string>
+    <string name="this_action_contains_ads">This action contains Ads</string>
+    <string name="obd_title_first">Easy communication with Pets</string>
+    <string name="obd_title_second">What does the pet want to tell you?</string>
+    <string name="obd_title_third">Pet training blog</string>
+    <string name="next_t">next</string>
+    <string name="start_t">start</string>
+    <string name="skip_t">Skip</string>
+    <string name="nav_open">open</string>
+    <string name="nav_close">close</string>
+    <string name="information_t">Information</string>
+    <string name="language_drawer">Language</string>
+    <string name="dog_and_cat_translator"><![CDATA[Dog & Cat Translator]]></string>
+    <string name="version_t">Version</string>
+    <string name="translator_t">Translator</string>
+    <string name="training_t">Training</string>
+
+    <!-- Dog translator -->
+    <string name="curious_t">Curious</string>
+    <string name="lets_play">Let’s play</string>
+    <string name="angry_t">Angry</string>
+    <string name="friendly_t">Friendly</string>
+    <string name="happy_t">Happy</string>
+    <string name="cry_t">Cry</string>
+    <string name="agree_t">Agree</string>
+    <string name="begging_t">Begging</string>
+    <string name="wanna_sleep">Wanna sleep</string>
+    <string name="dance_t">Dance</string>
+    <string name="i_love_you_dog">I love you</string>
+    <string name="hungry_t">Hungry</string>
+
+    <!-- Cat translator -->
+    <string name="play_with_me">Play with me</string>
+    <string name="i_want_to_go_to_sleep">I want to go to sleep</string>
+    <string name="i_need_to_pee">I need to pee</string>
+    <string name="i_want_to_take_a_bath">I want to take a bath</string>
+    <string name="dont_bother_me">Don’t bother me</string>
+    <string name="i_want_to_climb">I want to climb</string>
+    <string name="i_am_hungry">I am hungry</string>
+    <string name="i_am_boring_and_yawning">I am boring and yawning</string>
+    <string name="i_love_you_cat">I love you</string>
+    <string name="i_want_to_go_for_a_walk">I want to go for a walk</string>
+    <string name="im_lonely">I’m lonely</string>
+    <string name="i_want_to_bite_my_toys">I want to bite my toys</string>
+
+    <!-- Training -->
+    <string name="pets_health">Pet’s Health</string>
+    <string name="title_1">First Things to Teach Your Puppy</string>
+    <string name="title_2">How to feed a puppy correctly</string>
+    <string name="title_3">How and when to switch a puppy to dog food</string>
+    <string name="title_4">How to Teach Your Dog "Drop It"</string>
+    <string name="title_5">Teach Your Dog to Ring a Bell to Go Outside</string>
+    <string name="title_6">9 Cat training tips</string>
+    <string name="title_7">Cat Nutrition: Quick and Easy Guide to Choose Healthy Cat Food</string>
+    <string name="recom_mendation">Recommendation</string>
+
+    <string name="article_1_0">Bringing home a new puppy is exciting but can also be overwhelming. What are the first things to teach your puppy? Is there a right or a wrong place to start?</string>
+    <string name="article_1_1">Remember that puppies aren’t exactly a blank slate; genetics, early socialization, and maternal factors can all play a part in developing your puppy’s unique personality. But while every puppy is unique, there are a few first things to teach your puppy that can be consistently helpful in easing their transition to your home and starting their training off right.
+        \n \n
+        #1: Potty training and crate training \n \n
+        I’ve lumped these together because they go hand-in-hand as critical first things to teach your puppy; part of the potty training process will involve safely confining your dog for age-appropriate periods.
+        \n \n
+        1) Do not free-feed your puppy. Unless your veterinarian feels a medical reason requires your pup to be free-fed, stick to a set feeding schedule.
+        \n \n
+        2) Be aware of your pup’s activities. It may be time for a potty break if they have just eaten, drank water, and played.
+        \n \n
+        3) Watch for sniffing, circling, or running into another room.
+        \n \n
+        4) Do not give your puppy access to your entire house; baby gate off a room or two to start.
+        \n \n
+        5) Your pup should be crated or penned anytime you cannot actively supervise them.
+        \n \n
+        6) Interrupt accidents as they happen with a few claps, and get your pup immediately outside. Do not be scared or threatening with your interruption. Reward them for finishing outside.
+        \n \n
+        7) If you miss an accident and find it later, clean it up and do not punish your puppy.
+        \n \n
+        #2: Coming when called \n \n
+        We love to teach coming when called from puppyhood, as pups tend to be naturally inclined to follow us when they’re very young. Recall exercises are great for building a bond with you and can help instill a lifelong love for training in your puppy.
+        \n\n
+        -Start working on your recall inside your home with minimal distractions.\n
+        -When your dog is nearby but not paying attention to you, say your dog’s name, followed by your recall word. Example: "Rover, come!"\n
+        -Then, use as many high-pitched noises and excited motions as possible to get Rover to come. If you start at a short distance with no distractions, your dog will likely come without issue.\n
+        -When your dog arrives, reward it with excellent food such as string cheese or chicken \n
+    </string>
+
+    <string name="article_2_0">Young dogs grow quickly, meaning it’s important to consider how much to feed your puppy. You also need to think about the type of food that you serve up to your canine companion, as well as how often you feed them.</string>
+    <string name="article_2_1">#1: How often should I feed my puppy?
+        \n \n
+        It’s really important to get your puppy into regular feeding habits from an early age. Most puppies benefit from three meals a day at regular intervals, ideally at breakfast, lunch, and dinner. When your pup moves past the six-month mark, you can reduce this to two meals per day.
+        \n \n
+        Make sure you’re consistent with your feeding times and don’t leave your dog’s food sitting on the floor for more than twenty minutes. When it comes to table scraps, feeding your pup bits and pieces from the table is perfectly fine if they’re not toxic to your dog’s health (chocolate being an example of a food to avoid).
+        \n \n
+        It’s also important that you don’t encourage or reward bad behaviour when you’re feeding your puppy table scraps. Ensuring that they sit before being fed and limiting the amount you feed them from the table will help to manage their behaviour when you’re eating your family meal.
+        \n \n
+        #2: Are there any ingredients to avoid in puppy food?
+        \n \n
+        Just because a food is branded as “puppy food,” it doesn’t necessarily make it a healthy choice. For instance, avoid the likes of artificial colours and preservatives, corn syrup, nondescript fats, and added salts.
+        \n \n
+        The best way to think about your dog’s food is to consider what you would eat yourself. Unhealthy human diets consist of highly processed ingredients, and the same is true for our canine companions. To help your dog live their best life, you need to invest in nutritious, wholesome food that helps them develop.
+    </string>
+
+    <string name="article_3_0">We know that lots of pet owners want to know when to switch a dog from puppy food, as it’s one of the most frequently asked questions about dog food. No matter how old your dog is, it’s crucial to feed them healthy, nutritious food that helps them thrive.</string>
+    <string name="article_3_1">
+        \n \n
+        #1: When to switch puppy to dog food?\n
+        \n \n
+        Most vets recommend changing your pup’s diet when they’re between one and two years old. The age of transition depends on the breed of dog, with bigger breeds typically making the switch later than smaller breeds. But crucially, transitioning from puppy food to adult food doesn’t necessitate changing your dog’s food.
+        \n \n
+        #2: How to switch from puppy food to dog food?
+        \n \n
+        Any changes that you make to your dog’s diet are likely to take a little bit of time. The transition from a puppy to an adult diet can be a lot for your dog to get used to, particularly if you’re making the switch from kibble to healthy and nutritious food for the first time.
+        \n \n
+        We suggest taking your time and introducing the switch over a period of seven days, as it’s unreasonable to expect your dog to change their feeding habits overnight. Sudden changes in your dog’s diet can lead to stomach issues and may even put them off their food altogether.\n
+        \n
+        When it’s time to make the change, consistency is key. Make sure you feed your dog at their regular dinner time and implement any changes gradually. This is particularly important if you’re adding a new type of food to your dog’s diet. The key thing to remember is that all dogs are different, and some will take longer to adjust to the changes than others. As such, you need to be patient with your pooch and recognise that it’s something that is likely to take a little bit of time.
+    </string>
+    <string name="article_4_0">If you’ve been looking for an easy way to teach your dog how to \"Drop It\", you’ve come to the right place! This training can be potentially lifesaving for your dog; in an emergency situation where your dog has grabbed something poisonous or otherwise dangerous, having a reliable \"drop\" cue is critical.</string>
+    <string name="article_4_1">
+        \n \n
+        #1: How do you begin to teach your dog \"Drop it\"?
+        \n \n
+        The first step of teaching your dog \"drop it\" begins with nothing in your dog’s mouth. Yes, you read that correctly! Nothing in your dog’s mouth. Rather than trying to get something out of your dog’s mouth before they’ve truly learned how to \"drop it,\" we will create a strong association with the word and then pair that word with the action we want.
+        \n\n
+        You’ll need food that your dog loves for this exercise. If your dog isn’t excited about your training treats, try some string cheese or shredded chicken.
+        \n \n
+        #2: Here are your first steps:
+        \n \n
+        1. With your dog sitting or standing in front of you, say \"drop!\" in a pleasant tone. We prefer the single-syllable \"drop\" instead of \"Drop It,\" but use what works best for you!\n
+        \n
+        2. Immediately after saying the word (not at the same time), spill several pieces of food on the ground and point them out to your dog. (We want to get them used to your hands potentially being near the dropped item, to help prevent any guarding from developing!\n
+        \n
+        3. Repeat this exercise until your dog noticeably orients to the sound of the word \"drop.\" We’re looking for a tail wag, perked ears, licking the lips, etc. This can take at least a day or two!\n
+        \n
+        4. We typically recommend doing this exercise for an entire week – practice this inside (in various rooms of the house) as well as outside. You can’t overdo it!\n
+        \n
+        #3: Now, how do we introduce items
+        \n \n
+        Once your dog has clearly made a positive association with the word \"drop,\" it’s time to start to teach your dog \"drop it\" with items that aren’t highly valuable to them.
+        \n \n
+        1. Have your food rewards ready, but out of sight. If your dog knows you have food, you’ll have a harder time getting them to pick up any items.\n
+        \n
+        2. Wait until your dog picks up a toy (you can encourage them!) and then say \"drop!\" in that same pleasant tone you’ve been practicing. Say the word only once.\n
+        \n
+        3. As you say the word, back several steps away from your dog. This part is critical! We’re removing your body pressure from your dog.\n
+        \n
+        4. Your dog should drop the item instantaneously. Praise and reward immediately.\n
+        \n
+        5. You can collect the item sometimes, but when it’s safe to do so, let your dog have it back. Taking the item away every time can diminish your success.\n
+        \n
+        6. Practice with easy items both inside outside before moving on.
+    </string>
+
+    <string name="article_5_0">The process to teach your dog to ring a bell to go outside involves three steps: first, teaching your dog how to ring the bell.</string>
+    <string name="article_5_1">\n#Step 1: Reward your dog when they ring the bell.
+        \n\n
+        Before you get started, an important note; please don’t ring the bells yourself or grab your dog’s paw to help them ring it! The noise can initially be startling for some dogs, so we don’t want to risk setting back your training by rushing through the process.
+        \n\n
+        1. Hold the bells upright in your hand and wait for your pup to investigate them. You can also slip your hand behind the bell to encourage them to check them out.\n
+        \n\n
+        2. Most dogs will sniff the bells or lightly touch them with their nose. The moment your dog does this, say \"yes!\" and reward with a small treat.\n
+        \n\n
+        3. If your dog won’t initially touch the bells in your hand, put them on the ground and give her a bit of time. Try not to put pressure on your dog.\n
+        \n\n
+        4. For dogs that are very nervous of the bells at first, you can reward simply for looking at the bells or taking a step towards them, then work your way up to touching them.\n
+        \n\n
+        5. If you were using your hand to help them touch the bells, you should now begin gradually moving your hand towards the top of the bells, and only rewarding your dog for touching the bells, not your hand.
+        \n\n
+        #Step 2: Move the bell to the door.
+        \n \n
+        Now we’re going to apply this same training to the door! Be sure to use a door that leads directly to the outside.
+        \n\n
+        1. Put the bells on the door and slide your hand behind them to encourage your dog to touch the bells in this new location.\n
+        \n
+        2. Anytime your dog’s nose touches the bells, mark \"yes!\" and reward.\n
+        \n
+        3. If your dog is touching the bells too gently to make a noise, simply pause for a few seconds after they ring the bell. Once they realize they aren’t being rewarded, they will typically hit the bells a bit harder. Reward that!\n
+        \n
+        4. Now gradually slide your hands higher up the bells, and reward your dog for touching the bells and not your hand.\n
+        \n
+        5. Your next step is to move further away from the door, and wait for your dog to offer the behavior of ringing the bells. Try to avoid pointing or excessively talking to your dog – give them a bit of space and watch them work!\n
+        \n
+        #Step 3: Applying the behavior to pottying
+        \n
+        Now it’s time to apply this new behavior to its intended purpose – teaching your dog to ring the bell to be let outside to potty!\n
+        \n
+        Now, you will simply wait for your dog to offer the behavior of ringing the bell. When they do, reward them quickly, open the door, and let them outside.\n
+        Reward again after they eliminate outside.\n\n
+        Once you’re seeing success, you can begin to only reward after they eliminate outside.\n
+        Lastly, the food rewards can go away altogether once your dog is consistently ringing the bell and eliminating outdoors. Over time relief of using the bathroom can actually be a reward for your dog!\n
+    </string>
+
+    <string name="article_6_0">
+        1. Start with something easy.
+        \n \n
+        As with anything new, it’s important to start with the basics first. As tempting as it may be to jump right into training your cat to jump through a hoop, chances are that would end in frustration for both of you. Start with some simple skills to show your cat that training is fun and easy.\n</string>
+    <string name="article_6_1">
+        2. Keep the training sessions short.\n
+        It can be hard to keep a cat’s attention when they are new to training. Shorter sessions will keep your cat focused, and prevent them from losing interest or getting frustrated.\n
+        \n
+        When your cat is first beginning, we recommend starting with 3-5 minute sessions once or twice a day. Short but frequent and consistent training sessions will be way more effective than longer ones. For example, having two to three 5 minute training sessions in a day is typically better than one 15 minute session.\n
+        \n
+        As your cat advances, you can increase the length of your training sessions. If possible, try to end your session on a positive note before your cat loses interest.\n
+        \n
+        3. Eliminate any distractions.\n
+        Pick a quiet area of your home for your cat training sessions – someplace with as few distractions as possible. Family members, other pets, and noises can be quite distracting, and your cat may not be able to focus.\n
+        \n
+        If you have other pets, close them off in another room of the house so you and your cat can focus only on each other and the training. While there are strategies to train multiple cats at once, it’s best to start off working with just one cat at a time.\n
+        \n
+        4. Reward immediately and consistently.\n
+        The clicker takes a snaphshot of the correct behavior and let’s your cat know which behavior earned the reward. For clicker training to work properly, it’s essential to click right at the precise moment your cat performs the desired behavior. Because the click is a promise of a reward, it’s necessary always to give your cat a treat after you click. Behavior that gets rewarded gets repeated, so once your cat knows what behavior is earning treats, they will start to offer that behavior making it easy for you to add a signal down the road.\n
+        \n
+        5. Find the right reward.\n
+        There is no magical, universal training treat. Just as with humans, different cats have different treat preferences. Some may prefer dry treats or kibble, while others prefer wet food or squeezable treats. It’s good to have multiple treats that your cat will work for.\n
+        \n
+        You may also find that your cat is willing to perform easy behaviors for one type of treat, but that they require a higher-value treat for more difficult behaviors. A high value treat doesn’t necessarily mean a more expensive treat. It is just a treat your cat sees as being special.\n
+        \n
+        Again, this will be different for every cat, but typically it will be something they don’t get to have on a very regular basis. For example, if your cat only eats wet food for their regular meals, they may see dry food as something extra special!\n
+        \n
+        6. Don’t punish the bad behavior.\n
+        As a general rule, cats don’t respond well to punishment. Punishing your cat can lead to stress and anxiety, and it can damage the sense of trust you’re building. Some cats will even view punishment as a reward - negative attention is attention, after all!\n
+        \n
+        Clicker training is all about positive reinforcement. The idea is always to reward the desired behaviors. When your cat engages in a negative behavior, you should try to redirect or distract your cat rather than punish. Better yet, figure out why your cat is doing that behavior and try to prevent it or teach them an alternative one. For example, if your cat is scratching the couch, the goal is to teach them to scratch a more appropriate option.\n
+        \n
+        7. Be consistent with your cues.\n
+        To avoid confusion, always use the same voice commands and hand signals for the behavior you are working on. Be sure that anyone else who trains with your cat also knows the correct commands and signals.\n
+        \n
+        8. Train at the right time.\n
+        Training requires a lot of focus from your cat, so you will want to be strategic about when you do your training sessions. After a nap or first thing in the morning is usually a good time, as your cat will be rested and ready for an activity. Right before mealtimes are great too because your cat will be more willing to work for their treat rewards if they’re a bit hungry. If your cat tends to be active at bedtime, you can engage in a training session with them before you go to sleep to help tire them out too.\n
+        \n
+        9. Involve others\n
+        If you have other members of your household, it is beneficial to include them in your cat’s training process. This is especially important if you’re working on training out any unwanted behaviors. All members of the household should know what the training method and goal is so they can also correctly and consistently address the bad behavior when it comes up. Involving others in the training also helps to build your cat’s socialization skills.\n
+    </string>
+    <string name="article_7_0">
+        #1. Packaging Appearance:\n \n
+        1. Photos of vegetation on the label >> put it down and move on.\n
+        2. Label wording that glamorizes plant ingredients >> move on.\n
+        3. Label words to be aware of: organic, natural, pure, grain-free, fresh… (not disqualifying, but worthy of skepticism. Most of these terms have no legal meaning when applied to pet foods.)\n
+        4. Labels with specific health claims (cleans teeth, supports kidneys, indoor, weight control, etc.) >> move on.\n</string>
+    <string name="article_7_1">
+        \n
+        #2. Food Type:\n \n
+        1. DRY >> don’t even pick it up! ALL Dry food (kibble) is inherently bad for cats. (This does not include freeze-dried products meant to be rehydrated prior to serving.)\n
+        2. Canned — Read the ingredients. Many canned foods still contain lots of plant matter.  \n
+        3. Raw / Frozen >> Some of these contain plant ingredients — look for those without plants.\n
+        \n
+        #3. Ingredient List:\n
+        \n
+        1. More than one plant-based ingredient >> Yellow light — read nutritional analysis!\n
+        2. Ingredient lists with the same plant broken into separate entries (peas, pea protein, pea flour). Not cool.\n
+        3. Fur and Feathers, not Hooves, Horns, and Scales.” (Choose proteins that resemble normal cat prey — cats don’t hunt cows, pigs, or fish..)\n
+        \n
+        #4. Nutritional Analysis:\n
+        \n
+        (should look like a mouse. High protein, low fat, low to no fiber.)\n
+        \n
+        1. Nutritional Analysis — Protein best at or above 9%.\n
+        2. Nutritional Analysis — Fat best at or below 2%.\n
+        3. Nutritional Analysis — Fiber best at or below 1%. (Fiber not noted should ring alarm bells.)\n
+        4. Following these cat nutrition guidelines will put you firmly on the right path to choosing a healthy food for your cat. Consult your feline veterinarian for specific nutritional advice tailored to your cat’s individual needs.\n
+    </string>
+    <string name="cancel_t">CANCEL</string>
+    <string name="next">Next</string>
 </resources>
