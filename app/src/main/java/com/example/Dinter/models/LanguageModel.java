@@ -1,4 +1,4 @@
-package com.example.Dinter.modelings;
+package com.example.Dinter.models;
 
 import com.example.Dinter.R;
 

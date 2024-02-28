@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.Dinter.R;
 import com.example.Dinter.adpters.LanguageAdapter;
 import com.example.Dinter.databinding.ActivityLanguageBinding;
-import com.example.Dinter.modelings.LanguageModel;
+import com.example.Dinter.models.LanguageModel;
 import com.example.Dinter.utils.Constants;
 import com.example.Dinter.utils.SharedPref;
 import com.example.Dinter.utils.Utils;

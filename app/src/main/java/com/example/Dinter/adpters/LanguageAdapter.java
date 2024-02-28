@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.example.Dinter.R;
-import com.example.Dinter.modelings.LanguageModel;
+import com.example.Dinter.models.LanguageModel;
 import com.example.Dinter.utils.SharedPref;
 
 import java.util.List;
