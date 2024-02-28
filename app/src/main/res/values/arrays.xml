@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cat_voice">
+        <item>Play With Me</item>
+        <item>I want to go to sleep</item>
+        <item>I need to pee</item>
+        <item>I want to take a bath</item>
+        <item>Don’t bother me</item>
+        <item>I want to climb</item>
+        <item>I am hungry</item>
+        <item>I am boring and yawning</item>
+        <item>I love you</item>
+        <item>I want to go for a walk</item>
+        <item>I’m lonely</item>
+        <item>I want to bite my toys</item>
+        <item>Don’t disturb my sleep</item>
+        <item>I need hug</item>
+        <item>I want to be alone</item>
+        <item>I want to run on a grass</item>
+        <item>Help me,please!</item>
+        <item>You want to be my hooman?</item>
+        <item>I’m going to bed</item>
+        <item>I’m excited to see you!</item>
+        <item>Good night!</item>
+        <item>How’s it going here?</item>
+        <item>I’m tired!</item>
+        <item>This is stressing me out!</item>
+        <item>I want to drink</item>
+        <item>That’s interesting</item>
+    </array>
+    <array name="dog_voice">
+        <item>Play With Me</item>
+        <item>I want to go to sleep</item>
+        <item>I need to pee</item>
+        <item>I want to take a bath</item>
+        <item>Don’t bother me</item>
+        <item>I want to climb</item>
+        <item>I am hungry</item>
+        <item>I am boring and yawning</item>
+        <item>I love you</item>
+        <item>I want to go for a walk</item>
+        <item>I’m lonely</item>
+        <item>I want to bite my toys</item>
+        <item>Don’t disturb my sleep</item>
+        <item>I need hug</item>
+        <item>I want to be alone</item>
+        <item>I want to run on a grass</item>
+        <item>Help me,please!</item>
+        <item>You want to be my hooman?</item>
+        <item>I’m going to bed</item>
+        <item>I’m excited to see you!</item>
+        <item>Good night!</item>
+        <item>I’m tired!</item>
+        <item>This is stressing me out!</item>
+        <item>I want to drink</item>
+        <item>That’s interesting</item>
+        <item>I get mad</item>
+        <item>That’s annoying</item>
+        <item>I want to play</item>
+        <item>I have to eat something</item>
+    </array>
+    <array name="show_cat_words">
+        <item>Hey bro! I feel great today! Give me a loving touch! Come on!</item>
+        <item>I am angry! Why don’t you feed your sweetheart?! Why don’t you clean my poop?!</item>
+        <item>Stop! I am afraid of you! I hate you! Take care of my punch!</item>
+        <item>Well? Hey guy! What are you eating?</item>
+        <item>Enmmm~ Good job bro~ I am very satisfied with you!</item>
+        <item>Touch me~ And more~</item>
+        <item>You know what? I need a girlfriend, seriously.</item>
+        <item>You must be a good master! Certified!</item>
+        <item>Touch me more please~</item>
+        <item>Go with me!</item>
+        <item>I am really waiting for you to go back home~</item>
+        <item>Is there any food for me?</item>
+        <item>Hey bro~ There is nothing but serving your sweetheart for a lifetime! Hiahiahia~</item>
+        <item>Come on~ Baby~</item>
+        <item>What’s wrong with you, my baby?</item>
+        <item>T H A T ‘s A L L M I N E! A L L!</item>
+        <item>You are my Mom!</item>
+        <item>Hey it’s you! Why don’t you serve me now?</item>
+        <item>Hello ha~</item>
+        <item>Let’s go to sleep together!</item>
+        <item>Feed me! Feed me!</item>
+        <item>Don’t hurt me!</item>
+        <item>Wow~ You are exposed!</item>
+        <item>Your lord can not understand you.</item>
+        <item>Stop! Otherwise, don’t blame me for hitting you!</item>
+        <item>You scared me!</item>
+        <item>Let’s have a talk?</item>
+        <item>You can speak in Meow Meow Meow?!</item>
+        <item>Your pronunciation can’t be worse, give it up! Ok?</item>
+        <item>Stupid! Follow me~ Meow~</item>
+        <item>Not bad~ But I want more~</item>
+        <item>Stop!!!</item>
+        <item>Honey~ Let me give you a hug~</item>
+        <item>Come play the game with me!</item>
+        <item>It’s too shameful…</item>
+        <item>I am patrolling my territory!</item>
+        <item>It smells that there is something to eat! For me!</item>
+    </array>
+    <array name="show_dog_words">
+        <item>So happy!</item>
+        <item>Mom loves me the most!</item>
+        <item>I am friendly~</item>
+        <item>Hello! You are my fish!</item>
+        <item>Come and feed me please~</item>
+        <item>Aha! Stand there! And don’t move!</item>
+        <item>What I want to do is staying with you.</item>
+        <item>I am so hungry! I want a small sausage.</item>
+        <item>My dear boss~ Look at my skinny body~</item>
+        <item>You know that! Don’t bully me too much!</item>
+        <item>I did something wrong… Mom must be mad…</item>
+        <item>Look! I protected you! What a good job I have done!</item>
+        <item>Being human is so complicated. They always do something that I can’t understand.</item>
+        <item>Stop bad boy! Today is not your day!</item>
+        <item>I am very annoyed, come and say something funny for me! Right now!</item>
+        <item>I hate you! You are bad! Get off!</item>
+        <item>Nobody here but I feel a stomachache, where are you Mom?</item>
+        <item>I have something to talk about with you, Daddy and Mom.</item>
+        <item>Yohoo~ I don’t want to get in trouble.</item>
+        <item>Let’s play games!</item>
+        <item>I am a little angry.</item>
+        <item>I have been here! Here is my possession!</item>
+        <item>You are the boss at home, and I listen to you.</item>
+        <item>Is anybody here? I am so lonely that I need a partner!</item>
+        <item>I want to stay alone.</item>
+        <item>Beg you~ Please~</item>
+        <item>I am hungry. Serve me to eat!</item>
+        <item>I am so happy! Let’s rock and roll!</item>
+        <item>I am so angry! And I am going to bite you!</item>
+        <item>It is not my idea. Please accept my apology!</item>
+        <item>Come on~ Give my lovely belly a loving touch~</item>
+        <item>I will be a good kid.</item>
+        <item>Please take me a walk!</item>
+    </array>
+</resources>

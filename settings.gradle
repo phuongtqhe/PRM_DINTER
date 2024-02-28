@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Pet Voice Translator Simulator"
+rootProject.name = "Dinter"
 include ':app'
