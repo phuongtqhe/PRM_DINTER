@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cat_voice">
+        <item>Juega conmigo</item>
+        <item>Quiero irme a dormir</item>
+        <item>Necesito orinar</item>
+        <item>Quiero bañarme</item>
+        <item>No me molestes</item>
+        <item>Quiero escalar</item>
+        <item>Tengo hambre</item>
+        <item>Estoy aburrido y bostezando</item>
+        <item>Te amo</item>
+        <item>Quiero salir a caminar</item>
+        <item>Me siento solo</item>
+        <item>Quiero morder mis juguetes</item>
+        <item>No perturbes mi sueño</item>
+        <item>Necesito un abrazo</item>
+        <item>Quiero estar solo</item>
+        <item>Quiero correr sobre el césped</item>
+        <item>¡Ayúdame, por favor!</item>
+        <item>¿Quieres ser mi hombre?</item>
+        <item>Me voy a la cama</item>
+        <item>¡Estoy emocionado de verte!</item>
+        <item>¡Buenas noches!</item>
+        <item>¿Cómo te va por aquí?</item>
+        <item>¡Estoy cansado!</item>
+        <item>¡Esto me está estresando!</item>
+        <item>Quiero beber</item>
+        <item>Eso es interesante</item>
+    </array>
+    <array name="dog_voice">
+        <item>Juega conmigo</item>
+        <item>Quiero irme a dormir</item>
+        <item>Necesito orinar</item>
+        <item>Quiero bañarme</item>
+        <item>No me molestes</item>
+        <item>Quiero escalar</item>
+        <item>Tengo hambre</item>
+        <item>Estoy aburrido y bostezando</item>
+        <item>Te amo</item>
+        <item>Quiero salir a caminar</item>
+        <item>Me siento solo</item>
+        <item>Quiero morder mis juguetes</item>
+        <item>No perturbes mi sueño</item>
+        <item>Necesito un abrazo</item>
+        <item>Quiero estar solo</item>
+        <item>Quiero correr sobre el césped</item>
+        <item>¡Ayúdame, por favor!</item>
+        <item>¿Quieres ser mi hombre?</item>
+        <item>Me voy a la cama</item>
+        <item>¡Estoy emocionado de verte!</item>
+        <item>¡Buenas noches!</item>
+        <item>¡Estoy cansado!</item>
+        <item>¡Esto me está estresando!</item>
+        <item>Quiero beber</item>
+        <item>Eso es interesante</item>
+        <item>Me enojo</item>
+        <item>Eso es molesto</item>
+        <item>Quiero jugar</item>
+        <item>Tengo que comer algo</item>
+    </array>
+    <array name="show_cat_words">
+        <item>¡Hola hermano! ¡Me siento genial hoy! ¡Dame un toque amoroso! ¡Vamos!</item>
+        <item>¡Estoy enojado! ¡¿Por qué no le das de comer a tu amada?! ¡¿Por qué no limpias mi caca?!</item>
+        <item>¡Detente! ¡Te tengo miedo! ¡Te odio! ¡Cuida mi golpe!</item>
+        <item>¿Y bien? ¡Hey! Chico! ¿Qué estás comiendo?</item>
+        <item>Enmmm~ Buen trabajo hermano~ ¡Estoy muy satisfecho contigo!</item>
+        <item>Tócame~ Y más~</item>
+        <item>¿Sabes qué? Necesito una novia, en serio.</item>
+        <item>¡Debes ser un buen maestro! ¡Certificado!</item>
+        <item>Tócame más por favor~</item>
+        <item>¡Ve conmigo!</item>
+        <item>Realmente estoy esperando que regreses a casa~</item>
+        <item>¿Hay algo de comida para mí?</item>
+        <item>Hola hermano ~ ¡No hay nada más que servir a tu amada toda la vida! Hiahiahia~</item>
+        <item>Vamos~ Bebé~</item>
+        <item>¿Qué te pasa, mi bebé?</item>
+        <item>¡ESO ES TODO MÍO! ¡TODOS!</item>
+        <item>¡Eres mi mamá!</item>
+        <item>¡Oye, eres tú! ¿Por qué no me sirves ahora?</item>
+        <item>Hola ja~</item>
+        <item>¡Vamos a dormir juntos!</item>
+        <item>¡Aliméntame! ¡Aliméntame!</item>
+        <item>¡No me hagas daño!</item>
+        <item>Vaya~ ¡Estás expuesto!</item>
+        <item>Tu señor no puede entenderte.</item>
+        <item>¡Detente! De lo contrario, ¡no me culpes por golpearte!</item>
+        <item>¡Me asustaste!</item>
+        <item>¿Vamos a hablar?</item>
+        <item>¡¿Puedes hablar en Miau Miau Miau?!</item>
+        <item>Tu pronunciación no puede ser peor, ¡déjala! ¿Vale?</item>
+        <item>¡Estúpido! Sígueme~ Miau~</item>
+        <item>No está mal~ Pero quiero más~</item>
+        <item>¡¡¡Para!!!</item>
+        <item>Cariño~ Déjame darte un abrazo~</item>
+        <item>¡Ven a jugar conmigo!</item>
+        <item>Es demasiado vergonzoso…</item>
+        <item>¡Estoy patrullando mi territorio!</item>
+        <item>¡Huele que hay algo para comer! ¡Para mí!</item>
+    </array>
+    <array name="show_dog_words">
+        <item>¡Qué feliz!</item>
+        <item>¡Mamá es la que más me ama!</item>
+        <item>Soy amigable~</item>
+        <item>¡Hola! ¡Tú eres mi pez!</item>
+        <item>Ven y dame de comer por favor~</item>
+        <item>¡Ajá! ¡Quédate ahí! ¡Y no te muevas!</item>
+        <item>Lo que quiero hacer es quedarme contigo.</item>
+        <item>¡Tengo tanta hambre! Quiero una salchicha pequeña.</item>
+        <item>Mi querido jefe~ Mira mi cuerpo flaco~</item>
+        <item>¡Lo sabes! ¡No me intimides demasiado!</item>
+        <item>Hice algo mal... Mamá debe estar enojada...</item>
+        <item>¡Mira! ¡Yo te protejo! ¡Qué buen trabajo he hecho!</item>
+        <item>Ser humano es muy complicado. Siempre hacen algo que no puedo entender.</item>
+        <item>¡Detén al chico malo! ¡Hoy no es tu día!</item>
+        <item>¡Estoy muy enojado, ven y di algo gracioso para mí! ¡Ahora mismo!</item>
+        <item>¡Te odio! ¡Eres malo! ¡Bájate!</item>
+        <item>No hay nadie aquí pero siento dolor de estómago, ¿dónde estás mamá?</item>
+        <item>Tengo algo de qué hablar con ustedes, papá y mamá.</item>
+        <item>Yohoo~ No quiero meterme en problemas.</item>
+        <item>¡Juguemos!</item>
+        <item>Estoy un poco enojado.</item>
+        <item>¡He estado aquí! ¡Aquí está mi posesión!</item>
+        <item>Tú eres el jefe en casa y yo te escucho.</item>
+        <item>¿Hay alguien aquí? ¡Me siento tan sola que necesito una pareja!</item>
+        <item>Quiero quedarme solo.</item>
+        <item>Te lo ruego~ Por favor~</item>
+        <item>Tengo hambre. ¡Sírveme de comer!</item>
+        <item>¡Estoy tan feliz! ¡Vamos a rockear!</item>
+        <item>¡Estoy tan enojado! ¡Y te voy a morder!</item>
+        <item>No es idea mía. ¡Por favor acepte mis disculpas!</item>
+        <item>Vamos ~ Dale un toque amoroso a mi hermosa barriga ~</item>
+        <item>Seré un buen niño.</item>
+        <item>¡Por favor llévame a caminar!</item>
+    </array>
+</resources>
