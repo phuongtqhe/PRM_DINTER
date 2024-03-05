@@ -5,6 +5,7 @@ import android.animation.ValueAnimator;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -15,12 +16,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.example.Dinter.BuildConfig;
 import com.example.Dinter.R;
+import com.example.Dinter.apiHandlers.ApiCall;
+import com.example.Dinter.apiHandlers.ApiCallback;
+import com.example.Dinter.models.HobbyModel;
 import com.google.android.material.appbar.MaterialToolbar;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RelativeLayout drawerLayout, languageButton, infoButton, rightPart, blurSceneEffect;
     private MaterialToolbar materialToolbar;
     private ImageView closeDrawerButton;
+    private ApiCall apiCall;
     private int windowWidth;
 
     // Create a value animator that animates the width of the layout from 0 to WRAP_CONTENT
@@ -34,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDefine(){
+        //api call
+        apiCall = new ApiCall();
+
         //buttons
         materialToolbar = findViewById(R.id.header);
         languageButton = findViewById(R.id.language_drawer_btn);
@@ -50,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
         blurSceneEffect = findViewById(R.id.blur_scene_effect);
     }
     private void initAction(){
+        apiCall.getAllHobbies(new ApiCallback() {
+            @Override
+            public void onHobbyFullLoaded(List<HobbyModel> hobbyList) {
+                for (int i = 0; i < hobbyList.size(); i++) {
+                    Log.d("HobbyItemNe", hobbyList.get(i).get_id());
+                }
+            }
+        });
 
         drawer_open_animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
