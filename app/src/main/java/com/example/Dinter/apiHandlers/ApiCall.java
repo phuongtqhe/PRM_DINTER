@@ -36,26 +36,4 @@ public class ApiCall {
 
     //define function to call api here
 
-    public void getAllHobbies(ApiCallback apiCallback){
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
-        HobbyService hobbyService = retrofit.create(HobbyService.class);
-        hobbyService.getAllHobbies().enqueue(new Callback<HobbyModel.JsonResponse>() {
-            @Override
-            public void onResponse(Call<HobbyModel.JsonResponse> call, Response<HobbyModel.JsonResponse> response) {
-                if (response.isSuccessful()) {
-                    HobbyModel.JsonResponse hobbyJson = response.body();
-                    apiCallback.onHobbyFullLoaded(hobbyJson.getData());
-                } else {
-                    Log.d("Fetch ne: " , String.valueOf(response.code()));
-                }
-            }
-
-            @Override
-            public void onFailure(Call<HobbyModel.JsonResponse> call, Throwable t) {
-                Log.d("Fetch ne: " , String.valueOf(t.getMessage()));
-            }
-
-        });
-    }
-
 }
