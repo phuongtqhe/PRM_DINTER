@@ -91,4 +91,7 @@
     <color name="textColor">#ff666666</color>
     <color name="text_exit">#2152FF</color>
     <color name="whiteBlur">#bf9c9c9c</color>
+    <color name="term_privacy">#0386d0</color>
+    <color name="text_login">#036bb9</color>
+    <color name="main_color">#f2335f</color>
 </resources>
