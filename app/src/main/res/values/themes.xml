@@ -79,6 +79,11 @@
         <item name="android:textColor">#000000</item>
     </style>
 
+    <style name="circularImageViewStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Adjust the percentage for desired roundness -->
+    </style>
+
     <!-- styles.xml -->
     <style name="time_line">
         <item name="android:textSize">14sp</item>
