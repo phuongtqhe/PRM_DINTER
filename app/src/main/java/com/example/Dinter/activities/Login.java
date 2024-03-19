@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -57,6 +58,10 @@ public class Login extends AppCompatActivity {
                 if(response.isSuccessful()) {
                     UserModel.Login res = response.body(); // response data
                     UserModel user = res.getData(); // user info
+
+                    //save user
+                    UserModel.currentUser = response.body().getData();
+
                     Toast.makeText(Login.this, "Welcome " + response.body().getData().getUsername(), Toast.LENGTH_SHORT).show();
 
                     // Save user info + access/refresh token into dinter.txt

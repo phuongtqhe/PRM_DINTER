@@ -8,19 +8,31 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
 import com.example.Dinter.BuildConfig;
 import com.example.Dinter.R;
+import com.example.Dinter.adpters.ConversationAdapter;
+import com.example.Dinter.adpters.LanguageAdapter;
 import com.example.Dinter.apiHandlers.ApiCall;
 import com.example.Dinter.apiHandlers.ApiCallback;
+import com.example.Dinter.apiHandlers.ConversationApi;
 import com.example.Dinter.apiHandlers.HobbyApi;
+import com.example.Dinter.databinding.ActivityMainBinding;
+import com.example.Dinter.models.ConversationModel;
 import com.example.Dinter.models.HobbyModel;
+import com.example.Dinter.models.UserModel;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.List;
 
@@ -28,7 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private RelativeLayout drawerLayout, languageButton, infoButton, rightPart, blurSceneEffect;
     private MaterialToolbar materialToolbar;
     private ImageView closeDrawerButton;
-    private HobbyApi apiCall;
+    private ConversationApi apiCall;
+    ConversationAdapter conversationAdapter;
+    ShapeableImageView avatar;
+    TextView username, email;
+    ListView conversationListView;
     private int windowWidth;
 
     // Create a value animator that animates the width of the layout from 0 to WRAP_CONTENT
@@ -43,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDefine(){
         //api call
-        apiCall = new HobbyApi();
+        apiCall = new ConversationApi();
 
         //buttons
         materialToolbar = findViewById(R.id.header);
@@ -56,18 +72,31 @@ public class MainActivity extends AppCompatActivity {
         drawer_open_animator =  ObjectAnimator.ofFloat(drawerLayout, "translationX", 300f, 0f);
         drawer_open_animator.setDuration(1000); // 1000 milliseconds
         rightPart = findViewById(R.id.right_part);
+        avatar= findViewById(R.id.avatar);
+        username= findViewById(R.id.username);
+        email=findViewById(R.id.email);
 
         //blur
         blurSceneEffect = findViewById(R.id.blur_scene_effect);
+
+        //listview
+        conversationListView = findViewById(R.id.listview);
     }
     private void initAction(){
-        apiCall = new HobbyApi();
-        apiCall.getAllHobbies(new ApiCallback() {
+        username.setText(UserModel.currentUser.getUsername());
+        email.setText(UserModel.currentUser.getEmail());
+        //avatar.setImageResource(UserModel.currentUser.getAvatar());
+        Glide.with(this)
+                .load("http://localhost:3008/" +UserModel.currentUser.getAvatar())
+                .into(avatar);
+        apiCall = new ConversationApi();
+        apiCall.getAllConversation(new ApiCallback() {
             @Override
-            public void onHobbyFullLoaded(List<HobbyModel> hobbyList) {
-                for (int i = 0; i < hobbyList.size(); i++) {
-                    Log.d("HobbyItemNe", hobbyList.get(i).get_id());
-                }
+            public void onConversationFullLoaded(List<ConversationModel> conversationList) {
+                ApiCallback.super.onConversationFullLoaded(conversationList);
+                //new adapter for conversation
+                conversationAdapter = new ConversationAdapter(MainActivity.this, conversationList);
+                conversationListView.setAdapter(conversationAdapter);
             }
         });
 

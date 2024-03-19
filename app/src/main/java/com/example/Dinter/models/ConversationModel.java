@@ -1,18 +1,40 @@
 package com.example.Dinter.models;
 
+import android.os.Message;
+
 import java.util.List;
 
 public class ConversationModel {
     private String _id;
-    private List<Members> members;
+    private List<UserModel> members;
+    private Message newMessage;
     private String createdAt;
     private String updatedAt;
 
-    public ConversationModel(String _id, List<Members> members, String createdAt, String updatedAt) {
-        this._id = _id;
-        this.members = members;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+    public class Message {
+        private String message;
+        private String senderId;
+
+        public Message(String message, String senderId) {
+            this.message = message;
+            this.senderId = senderId;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public String getSenderId() {
+            return senderId;
+        }
+
+        public void setSenderId(String senderId) {
+            this.senderId = senderId;
+        }
     }
 
     public String get_id() {
@@ -23,12 +45,20 @@ public class ConversationModel {
         this._id = _id;
     }
 
-    public List<Members> getMembers() {
+    public List<UserModel> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Members> members) {
+    public void setMembers(List<UserModel> members) {
         this.members = members;
+    }
+
+    public Message getNewMessage() {
+        return newMessage;
+    }
+
+    public void setNewMessage(Message newMessage) {
+        this.newMessage = newMessage;
     }
 
     public String getCreatedAt() {
@@ -46,17 +76,4 @@ public class ConversationModel {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
-
-    public static class Members {
-        private String id;
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-    }
-
 }

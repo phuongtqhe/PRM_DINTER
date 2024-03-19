@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class UserModel {
+    public static UserModel currentUser;
     private String _id;
     private String id; // Có trường hợp API trả ra id nên cho thêm 1 trường id này vào
     private String email;
@@ -17,6 +18,14 @@ public class UserModel {
     private String gender;
     private List<HobbyModel> hobbies;
     private String bio;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String get_id() {
         return _id;
