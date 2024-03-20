@@ -3,6 +3,7 @@ package com.example.Dinter.adpters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.Dinter.R;
 import com.example.Dinter.models.Message;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -54,6 +56,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         if(holder.getItemViewType() == ITEM_LEFT){
             LeftChatViewHolder viewHolder = (LeftChatViewHolder) holder;
             viewHolder.contents.setText(message.getText());
+            Picasso.get()
+                    .load("http://192.168.0.101:3008/public/images/users/image-1710685025286428629554_967182891430771_6571424009725047858_n.jpg")
+                    .into(viewHolder.imgView);
         }else{
             RightChatViewHolder viewHolder = (RightChatViewHolder) holder;
             viewHolder.contents.setText(message.getText());
@@ -76,10 +81,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     public class LeftChatViewHolder extends MessageViewHolder {
 
         public TextView contents;
+        public ImageView imgView;
 
         public LeftChatViewHolder(View itemView) {
             super(itemView);
             contents = (TextView) itemView.findViewById(R.id.tv_messagel);
+            imgView = itemView.findViewById(R.id.mesAvatar);
         }
     }
 

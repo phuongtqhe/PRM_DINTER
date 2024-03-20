@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.Dinter.R;
 import com.example.Dinter.adpters.MessageAdapter;
@@ -35,7 +36,8 @@ public class BoxChatActivity extends AppCompatActivity {
     private EditText edtMessage;
     private ImageButton btnButton;
     private UserModel user;
-    private ImageView imgAvatar;
+
+    private TextView username;
     private String receipentId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +46,13 @@ public class BoxChatActivity extends AppCompatActivity {
         edtMessage = findViewById(R.id.edt_message);
         btnButton = findViewById(R.id.btn_send);
         messageRecycle = findViewById(R.id.rcv_message);
-        imgAvatar = findViewById(R.id.imgAvatar);
         SharedPreferences sharedPreferences = getSharedPreferences("dinter.txt",MODE_PRIVATE);
         String jsonUser = sharedPreferences.getString("user", null);
         Gson gson = new Gson();
         user  = gson.fromJson(jsonUser, UserModel.class);
         System.out.println("UserId: " + user.getId());
-        Picasso.get()
-                .load("http://10.33.44.197:3008/public/images/users/image-1710685025286428629554_967182891430771_6571424009725047858_n.jpg")
-                .into(imgAvatar);
+        username = findViewById(R.id.mesUsername);
+        username.setText(user.getUsername());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         messageRecycle.setLayoutManager(linearLayoutManager);
         mListMessage = new ArrayList<>();
