@@ -20,6 +20,10 @@ import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
+import java.net.URISyntaxException;
+
+import io.socket.client.IO;
+import io.socket.client.Socket;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,6 +35,12 @@ public class Login extends AppCompatActivity {
     private Button mLoginBtn;
     private TextView mRegisterFormBtn;
 
+    public static Socket mSocket;
+    {
+        try {
+            mSocket = IO.socket("http://10.0.2.2:3002");
+        } catch (URISyntaxException e) {}
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +56,8 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(Login.this, Register.class);
             startActivity(intent);
         });
+
+        mSocket.connect();
     }
 
     private void login(UserModel.Account account) {
@@ -74,9 +86,8 @@ public class Login extends AppCompatActivity {
                     editor.putString("accessToken", res.getAccessToken());
                     editor.putString("refreshToken", res.getRefreshToken());
                     editor.apply();
-
+                    mSocket.emit("addNewUser", user.getId());
                     //End Save user info + access/refresh token into dinter.txt
-
                     //Next Page
                     Intent intent = new Intent(Login.this, BoxChatActivity.class);
                     startActivity(intent);
@@ -97,5 +108,9 @@ public class Login extends AppCompatActivity {
             }
         });
 
+    }
+    public void onDestroy() {
+        super.onDestroy();
+        mSocket.disconnect();
     }
 }

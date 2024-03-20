@@ -18,13 +18,19 @@ import com.example.Dinter.adpters.MessageAdapter;
 import com.example.Dinter.apiHandlers.ApiService;
 import com.example.Dinter.apiHandlers.RetrofitClient;
 import com.example.Dinter.models.Message;
+import com.example.Dinter.models.MessageSocketIO;
 import com.example.Dinter.models.UserModel;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,6 +45,8 @@ public class BoxChatActivity extends AppCompatActivity {
 
     private TextView username;
     private String receipentId;
+
+    Socket mSocket = Login.mSocket;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +66,7 @@ public class BoxChatActivity extends AppCompatActivity {
         mListMessage = new ArrayList<>();
         messageAdapter = new MessageAdapter();
         getMessage();
+        mSocket.on("getMessage", onNewMessage);
         btnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +81,11 @@ public class BoxChatActivity extends AppCompatActivity {
             return;
         }
         sendMessageToDB("65f9967cda4c90103f327627", user.getId(), message);
+        MessageSocketIO messagesSocketIO = new MessageSocketIO("65f9967cda4c90103f327627", user.getId(), message, receipentId);
+        Gson gson = new Gson();
+
+        String newMessage = gson.toJson(messagesSocketIO);
+        mSocket.emit("sendMessage", newMessage);
         mListMessage.add(new Message(message, user.getId(), message));
         messageAdapter.notifyDataSetChanged();
         messageRecycle.scrollToPosition(mListMessage.size() - 1);
@@ -122,4 +136,32 @@ public class BoxChatActivity extends AppCompatActivity {
         });
     }
 
+    private Emitter.Listener onNewMessage = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("nhay vao day");
+                    JSONObject data = (JSONObject) args[0];
+                    String conversationId;
+                    String recipientId;
+                    String senderId;
+                    String text;
+                    try {
+                        conversationId = data.getString("conversationId");
+                        recipientId = data.getString("recipientId");
+                        senderId = data.getString("senderId");
+                        text = data.getString("text");
+                    } catch (JSONException e) {
+                        return;
+                    }
+                    // add the message to view
+                    mListMessage.add(new Message(conversationId, senderId, text));
+                    messageAdapter.notifyDataSetChanged();
+                    messageRecycle.scrollToPosition(mListMessage.size() - 1);
+                }
+            });
+        }
+    };
 }
