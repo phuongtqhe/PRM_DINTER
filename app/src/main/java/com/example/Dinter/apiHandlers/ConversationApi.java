@@ -56,4 +56,25 @@ public class ConversationApi extends ApiCall{
 
         });
     }
+
+    public void getConversation(String firstId, String secondId, ApiCallback apiCallback){
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        conversationService.getConversation(firstId, secondId).enqueue(new Callback<ConversationModel>() {
+            @Override
+            public void onResponse(Call<ConversationModel> call, Response<ConversationModel> response) {
+                if (response.isSuccessful()) {
+                    ConversationModel listUser = response.body();
+                    apiCallback.onConverFullLoaded(listUser);
+                } else {
+                    Log.d("Fetch ne: " , String.valueOf(response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ConversationModel> call, Throwable t) {
+                Log.d("Fetch ne: " , String.valueOf(t.getMessage()));
+            }
+
+        });
+    }
 }

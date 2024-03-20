@@ -18,4 +18,8 @@ public interface ApiCallback {
     public default void onUserListFullLoaded(List<UserModel> userList) {
 
     }
+
+    public default void onConverFullLoaded(ConversationModel userList) {
+
+    }
 }

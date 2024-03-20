@@ -12,6 +12,7 @@
             android:id="@+id/avatar"
             android:layout_width="@dimen/_65sdp"
             android:layout_height="@dimen/_65sdp"
+            android:padding="@dimen/_6sdp"
             android:scaleType="fitXY"
             android:src="@drawable/default_avatar"
             app:shapeAppearanceOverlay="@style/circularImageViewStyle"
@@ -27,7 +28,12 @@
         android:gravity="center_vertical"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_height="@dimen/_65sdp">
-
+        <TextView
+            android:id="@+id/conversationId"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id" />
         <TextView
             android:id="@+id/username"
             android:layout_width="wrap_content"
@@ -47,7 +53,7 @@
 
         <ImageView
             android:id="@+id/timeSent"
-            android:layout_width="30dp"
+            android:layout_width="20dp"
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_height="wrap_content"
             android:src="@drawable/chat_svgrepo_com"/>

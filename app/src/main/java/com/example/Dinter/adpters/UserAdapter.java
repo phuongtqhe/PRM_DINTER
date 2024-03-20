@@ -27,7 +27,7 @@ public class UserAdapter extends ArrayAdapter<UserModel> {
     // Create a static class that holds the references to the views in your layout
     static private class ViewHolder {
         ShapeableImageView avatar;
-        TextView username;
+        TextView username, conversationId;
     }
 
     @NonNull
@@ -47,7 +47,7 @@ public class UserAdapter extends ArrayAdapter<UserModel> {
             holder = new UserAdapter.ViewHolder();
             holder.avatar = convertView.findViewById(R.id.avatar);
             holder.username = convertView.findViewById(R.id.username);
-
+            holder.conversationId = convertView.findViewById(R.id.conversationId);
             // Set the holder object as a tag for the view
             convertView.setTag(holder);
         } else {
@@ -57,7 +57,6 @@ public class UserAdapter extends ArrayAdapter<UserModel> {
 
         // Set the image and name for the views using the holder object
         assert userModel != null;
-
         holder.username.setText(userModel.getUsername());
         Picasso.get()
                 .load(Constants.BACK_END_HOST + convertBackslashToForward(userModel.getAvatar()))

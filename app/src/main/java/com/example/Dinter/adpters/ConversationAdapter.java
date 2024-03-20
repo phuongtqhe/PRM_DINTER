@@ -14,6 +14,7 @@ import com.example.Dinter.R;
 import com.example.Dinter.models.ConversationModel;
 import com.example.Dinter.models.UserModel;
 import com.example.Dinter.utils.Constants;
+import com.example.Dinter.utils.Utils;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.squareup.picasso.Picasso;
 
@@ -28,7 +29,7 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
     // Create a static class that holds the references to the views in your layout
     static private class ViewHolder {
         ShapeableImageView avatar;
-        TextView username, newMessage , timeSent;
+        TextView username, newMessage , timeSent, conversationId;
     }
 
     @NonNull
@@ -50,6 +51,7 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
             holder.newMessage = convertView.findViewById(R.id.newMessage);
             holder.username = convertView.findViewById(R.id.username);
             holder.timeSent = convertView.findViewById(R.id.timeSent);
+            holder.conversationId = convertView.findViewById(R.id.conversationId);
 
             // Set the holder object as a tag for the view
             convertView.setTag(holder);
@@ -71,6 +73,8 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
         } else{
             holder.newMessage.setText("to me: " + conversationModel.getNewMessage().getMessage());
         }
+        holder.conversationId.setText(conversationModel.get_id());
+        holder.timeSent.setText(Utils.formatDateTime(conversationModel.getUpdatedAt()));
         Picasso.get()
                 .load(Constants.BACK_END_HOST + convertBackslashToForward(conversationModel.getMembers().get(1).getAvatar()))
                 .into(holder.avatar);

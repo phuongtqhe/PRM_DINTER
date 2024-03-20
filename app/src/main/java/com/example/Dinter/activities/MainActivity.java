@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
@@ -103,8 +104,9 @@ public class MainActivity extends AppCompatActivity {
     private void initAction(){
         username.setText(UserModel.currentUser.getUsername());
         email.setText(UserModel.currentUser.getEmail());
-        Log.d("fds", UserModel.currentUser.getEmail());
-//        dob_text.setText(UserModel.currentUser.getDateOfBirth().toString());
+        dob_text.setText(UserModel.currentUser.getDateOfBirth().toString());
+        bio_text.setText(UserModel.currentUser.getBio().toString());
+
         Picasso.get()
                 .load(Constants.BACK_END_HOST + convertBackslashToForward(UserModel.currentUser.getAvatar()))
                 .into(avatar);
@@ -227,6 +229,21 @@ public class MainActivity extends AppCompatActivity {
                 blurSceneEffect.setVisibility(View.INVISIBLE);
             }
         });
+
+
+        conversationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                goToChatBox(view);
+            }
+        });
+
+    }
+
+    private void goToChatBox(View view){
+        Intent intent = new Intent(view.getContext(), BoxChatActivity.class);
+        intent.putExtra("conversationId", ((TextView)view.findViewById(R.id.conversationId)).getText() ); // Replace with actual parameter name and value
+        startActivity(intent);
     }
 
     private void setCurrentFragment(Fragment fragment){

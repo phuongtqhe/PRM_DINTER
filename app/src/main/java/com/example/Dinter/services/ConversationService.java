@@ -16,4 +16,7 @@ public interface ConversationService {
 
     @GET("http://10.0.2.2:3008/api/v1/user/findFriendo/{userId}/{keyWord}")
     Call<List<UserModel>> getFriendsOfUser(@Path("userId") String userId, @Path("keyWord") String keyWord);
+
+    @GET("http://10.0.2.2:3008/api/v1/conversation/find-chat-prm/{firstId}/{secondId}")
+    Call<ConversationModel> getConversation(@Path("firstId") String firstId, @Path("secondId") String secondId);
 }

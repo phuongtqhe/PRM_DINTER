@@ -25,9 +25,6 @@
             android:name=".activities.BoxChatActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.BoxChat"
-            android:exported="false" />
-        <activity
             android:name=".activities.Register"
             android:exported="false" />
         <activity

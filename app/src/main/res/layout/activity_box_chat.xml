@@ -10,6 +10,7 @@
         android:background="#E91E63"
         >
         <ImageView
+            android:id="@+id/back_icon"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_foreground"

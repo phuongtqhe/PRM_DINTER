@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -45,12 +47,17 @@ public class BoxChatActivity extends AppCompatActivity {
 
     private TextView username;
     private String receipentId;
-
+    ImageView back_icon;
     Socket mSocket = Login.mSocket;
+    String conversationId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_box_chat);
+        Intent intent = getIntent();
+        conversationId = intent.getStringExtra("conversationId"); // Replace with actual
+        Log.d("dsa", conversationId);
+
         edtMessage = findViewById(R.id.edt_message);
         btnButton = findViewById(R.id.btn_send);
         messageRecycle = findViewById(R.id.rcv_message);
@@ -60,6 +67,7 @@ public class BoxChatActivity extends AppCompatActivity {
         user  = gson.fromJson(jsonUser, UserModel.class);
         System.out.println("UserId: " + user.getId());
         username = findViewById(R.id.mesUsername);
+        back_icon= findViewById(R.id.back_icon);
         username.setText(user.getUsername());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         messageRecycle.setLayoutManager(linearLayoutManager);
@@ -73,6 +81,9 @@ public class BoxChatActivity extends AppCompatActivity {
                 sendMessage();
             }
         });
+        back_icon.setOnClickListener(view -> {
+            onBackPressed();
+        });
     }
 
     private void sendMessage() {
@@ -80,8 +91,8 @@ public class BoxChatActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(message)){
             return;
         }
-        sendMessageToDB("65f9967cda4c90103f327627", user.getId(), message);
-        MessageSocketIO messagesSocketIO = new MessageSocketIO("65f9967cda4c90103f327627", user.getId(), message, receipentId);
+        sendMessageToDB(conversationId, user.getId(), message);
+        MessageSocketIO messagesSocketIO = new MessageSocketIO(conversationId, user.getId(), message, receipentId);
         Gson gson = new Gson();
 
         String newMessage = gson.toJson(messagesSocketIO);
