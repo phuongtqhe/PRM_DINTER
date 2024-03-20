@@ -33,18 +33,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginBottom="@dimen/_10sdp"
             android:text="Đỗ Tuấn Nam"
             android:textStyle="bold"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/newMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cố lên nhé"
-            android:layout_gravity="bottom"
-            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,10 +45,11 @@
         android:layout_gravity="right"
         android:gravity="center">
 
-        <TextView
+        <ImageView
             android:id="@+id/timeSent"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:layout_height="wrap_content"
-            android:text="11:12 am" />
+            android:src="@drawable/chat_svgrepo_com"/>
     </LinearLayout>
 </LinearLayout>

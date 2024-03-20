@@ -71,6 +71,7 @@
                     android:src="@drawable/default_avatar"
                     app:strokeColor="@color/white"
                     app:strokeWidth="@dimen/_3sdp"
+                    android:scaleType="fitXY"
                     app:shapeAppearanceOverlay="@style/circularImageViewStyle"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/quote_icon"/>
                 <TextView
+                    android:id="@+id/bio_text"
                     android:layout_marginLeft="@dimen/_13sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -134,6 +136,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/cake_icon"/>
                 <TextView
+                    android:id="@+id/dob_text"
                     android:layout_marginLeft="@dimen/_13sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -211,7 +214,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_toEndOf="@+id/globe_icon24"
-                    android:text="@string/information_t" />
+                    android:text="@string/exit_t" />
             </RelativeLayout>
 
         </RelativeLayout>

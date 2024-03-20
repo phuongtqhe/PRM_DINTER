@@ -11,4 +11,8 @@ public class Utils {
         // Call this on the main thread as it may require Activity.restart()
         AppCompatDelegate.setApplicationLocales(appLocale);
     }
+
+    public static String convertBackslashToForward(String path) {
+        return path.replace("\\", "/");
+    }
 }
