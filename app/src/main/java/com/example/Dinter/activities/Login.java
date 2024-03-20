@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
                     //End Save user info + access/refresh token into dinter.txt
 
                     //Next Page
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    Intent intent = new Intent(Login.this, BoxChatActivity.class);
                     startActivity(intent);
                 } else {
                     String errorMessage;
