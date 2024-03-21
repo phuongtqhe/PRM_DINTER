@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.Dinter.R;
 import com.example.Dinter.models.Message;
+import com.example.Dinter.utils.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -57,7 +58,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             LeftChatViewHolder viewHolder = (LeftChatViewHolder) holder;
             viewHolder.contents.setText(message.getText());
             Picasso.get()
-                    .load("http://192.168.0.101:3008/public/images/users/image-1710685025286428629554_967182891430771_6571424009725047858_n.jpg")
+                    .load(Constants.BACK_END_HOST + "public/images/users/image-1710685025286428629554_967182891430771_6571424009725047858_n.jpg")
                     .into(viewHolder.imgView);
         }else{
             RightChatViewHolder viewHolder = (RightChatViewHolder) holder;

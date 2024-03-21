@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
     public static Socket mSocket;
     {
         try {
-            mSocket = IO.socket("http://192.168.31.137:3002");
+            mSocket = IO.socket("http://10.0.2.2:3002");
         } catch (URISyntaxException e) {}
     }
     @Override

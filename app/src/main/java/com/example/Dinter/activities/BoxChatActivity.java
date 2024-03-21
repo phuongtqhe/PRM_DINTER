@@ -120,7 +120,8 @@ public class BoxChatActivity extends AppCompatActivity {
 
     private void getMessage(){
         ApiService apiService = RetrofitClient.getApiService();
-        Call<List<Message>> call = apiService.getMessage("65f9967cda4c90103f327627");
+        System.out.println("conversationId =============== " + conversationId);
+        Call<List<Message>> call = apiService.getMessage(conversationId);
         call.enqueue(new Callback<List<Message>>() {
             @Override
             public void onResponse(Call<List<Message>> call, Response<List<Message>> response) {
@@ -129,11 +130,13 @@ public class BoxChatActivity extends AppCompatActivity {
                     for(int i = 0; i<mListMessage.size(); i++){
                         if(mListMessage.get(i).getSenderId().equals(user.getId()) == false){
                             receipentId = mListMessage.get(i).getSenderId();
-                            System.out.println(receipentId);
+                            System.out.println("receipentId " + receipentId);
                             break;
                         }
                     }
-                    System.out.println(mListMessage.size());
+                    Gson gson = new Gson();
+                    System.out.println("");
+                    System.out.println("list size" + mListMessage.size());
                     messageAdapter.setData(mListMessage, user.getId());
                     messageRecycle.setAdapter(messageAdapter);
                     messageRecycle.scrollToPosition(mListMessage.size() - 1);
