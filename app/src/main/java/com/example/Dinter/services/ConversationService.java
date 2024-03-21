@@ -11,12 +11,12 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface ConversationService {
-    @GET("http://10.0.2.2:3008/api/v1/conversation/find-user-chats-prm/{id}")
+    @GET("http://192.168.31.137:3008/api/v1/conversation/find-user-chats-prm/{id}")
     Call<List<ConversationModel>> getAllConversation(@Path("id") String id);
 
-    @GET("http://10.0.2.2:3008/api/v1/user/findFriendo/{userId}/{keyWord}")
+    @GET("http://192.168.31.137:3008/api/v1/user/findFriendo/{userId}/{keyWord}")
     Call<List<UserModel>> getFriendsOfUser(@Path("userId") String userId, @Path("keyWord") String keyWord);
 
-    @GET("http://10.0.2.2:3008/api/v1/conversation/find-chat-prm/{firstId}/{secondId}")
+    @GET("http://192.168.31.137:3008/api/v1/conversation/find-chat-prm/{firstId}/{secondId}")
     Call<ConversationModel> getConversation(@Path("firstId") String firstId, @Path("secondId") String secondId);
 }

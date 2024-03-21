@@ -25,4 +25,7 @@ public interface ApiService {
 
     @POST("message/create-message")
     Call<Message> sendMessage(@Body Message message);
+
+    @GET("user/public-user-info/{id}")
+    Call<UserModel.UserDetails> getUserDetails(@Path("id") String id);
 }

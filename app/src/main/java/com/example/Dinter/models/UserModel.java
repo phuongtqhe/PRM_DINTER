@@ -1,5 +1,6 @@
 package com.example.Dinter.models;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -267,6 +268,116 @@ public class UserModel {
             this.email = email;
             this.password = password;
             this.confirmPassword = confirmPassword;
+        }
+    }
+
+    public static class UserDetails {
+        private String id, username, avatar, bio, gender, dateOfBirth, email;
+        private List<String> friends;
+        private boolean isAdmin;
+        private List<HobbyModel> hobbies;
+        private Location location;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getAvatar() {
+            return avatar;
+        }
+
+        public void setAvatar(String avatar) {
+            this.avatar = avatar;
+        }
+
+        public String getBio() {
+            return bio;
+        }
+
+        public void setBio(String bio) {
+            this.bio = bio;
+        }
+
+        public String getGender() {
+            return gender;
+        }
+
+        public void setGender(String gender) {
+            this.gender = gender;
+        }
+
+        public String getDateOfBirth() {
+            return dateOfBirth;
+        }
+
+        public void setDateOfBirth(String dateOfBirth) {
+            this.dateOfBirth = dateOfBirth;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public List<String> getFriends() {
+            return friends;
+        }
+
+        public void setFriends(List<String> friends) {
+            this.friends = friends;
+        }
+
+        public boolean isAdmin() {
+            return isAdmin;
+        }
+
+        public void setAdmin(boolean admin) {
+            isAdmin = admin;
+        }
+
+        public List<HobbyModel> getHobbies() {
+            return hobbies;
+        }
+
+        public void setHobbies(List<HobbyModel> hobbies) {
+            this.hobbies = hobbies;
+        }
+
+        public Location getLocation() {
+            return location;
+        }
+
+        public void setLocation(Location location) {
+            this.location = location;
+        }
+
+        public UserDetails(String id, String username, String avatar, String bio, String gender, String dateOfBirth, String email, List<String> friends, boolean isAdmin, List<HobbyModel> hobbies, Location location) {
+            this.id = id;
+            this.username = username;
+            this.avatar = avatar;
+            this.bio = bio;
+            this.gender = gender;
+            this.dateOfBirth = dateOfBirth;
+            this.email = email;
+            this.friends = friends;
+            this.isAdmin = isAdmin;
+            this.hobbies = hobbies;
+            this.location = location;
         }
     }
 }
