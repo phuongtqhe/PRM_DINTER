@@ -18,6 +18,8 @@ public interface ApiService {
     @POST("user/register")
     Call<UserModel.Login> register(@Body UserModel.NewUser account);
 
+    @GET("user/public-user-info/{id}")
+    Call<UserModel.Login> getUserInfo(@Path("id") String userId);
     @GET("message/get-messages/{id}")
     Call<List<Message>> getMessage(@Path("id") String id);
 

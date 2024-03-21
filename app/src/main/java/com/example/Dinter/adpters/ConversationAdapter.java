@@ -29,7 +29,7 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
     // Create a static class that holds the references to the views in your layout
     static private class ViewHolder {
         ShapeableImageView avatar;
-        TextView username, newMessage , timeSent, conversationId;
+        TextView username, newMessage , timeSent, conversationId, receiverId, imageAvatar;
     }
 
     @NonNull
@@ -52,7 +52,8 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
             holder.username = convertView.findViewById(R.id.username);
             holder.timeSent = convertView.findViewById(R.id.timeSent);
             holder.conversationId = convertView.findViewById(R.id.conversationId);
-
+            holder.receiverId = convertView.findViewById(R.id.receiverId);
+            holder.imageAvatar = convertView.findViewById(R.id.imageAvatar);
             // Set the holder object as a tag for the view
             convertView.setTag(holder);
         } else {
@@ -73,10 +74,20 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
         } else{
             holder.newMessage.setText("to me: " + conversationModel.getNewMessage().getMessage());
         }
+        UserModel receiverUser = new UserModel();
+        System.out.println(conversationModel.getMembers().get(0).get_id());
+        for (int i = 0; i < conversationModel.getMembers().size(); i++) {
+            if(conversationModel.getMembers().get(i).get_id().equals(UserModel.currentUser.getId())==false){
+                receiverUser = conversationModel.getMembers().get(i);
+                break;
+            }
+        }
         holder.conversationId.setText(conversationModel.get_id());
+        holder.receiverId.setText(receiverUser.get_id());
+        holder.imageAvatar.setText(receiverUser.getAvatar());
         holder.timeSent.setText(Utils.formatDateTime(conversationModel.getUpdatedAt()));
         Picasso.get()
-                .load(Constants.BACK_END_HOST + convertBackslashToForward(conversationModel.getMembers().get(1).getAvatar()))
+                .load(Constants.BACK_END_HOST + convertBackslashToForward(receiverUser.getAvatar()))
                 .into(holder.avatar);
 
         // Return the view
