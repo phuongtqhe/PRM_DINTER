@@ -89,7 +89,7 @@ public class Login extends AppCompatActivity {
                     mSocket.emit("addNewUser", user.getId());
                     //End Save user info + access/refresh token into dinter.txt
                     //Next Page
-                    Intent intent = new Intent(Login.this, BoxChatActivity.class);
+                    Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
                 } else {
                     String errorMessage;

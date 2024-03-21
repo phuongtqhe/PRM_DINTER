@@ -17,4 +17,6 @@
     <string name="cancel_t">CANCEL</string>
     <string name="next">Next</string>
     <string name="version_t">Version</string>
+    <string name="search_hint">...find your friend</string>
+    <string name="exit_t">Exit</string>
 </resources>

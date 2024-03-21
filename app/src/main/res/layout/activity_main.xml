@@ -43,6 +43,15 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/search_icon">
             </ImageView>
+            <AutoCompleteTextView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:hint="@string/search_hint"
+                android:visibility="gone"
+                android:inputType="text"
+                android:imeOptions="actionSearch"/>
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -63,9 +72,9 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/topBar"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="0dp"
         android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
+        android:dividerHeight="20.0sp"
         android:paddingHorizontal="@dimen/_10sdp"
         android:scrollbars="vertical"
         app:layout_constraintTop_toBottomOf="@+id/topBar"

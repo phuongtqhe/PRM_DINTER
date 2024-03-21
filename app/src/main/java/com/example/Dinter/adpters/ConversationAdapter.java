@@ -1,5 +1,7 @@
 package com.example.Dinter.adpters;
 
+import static com.example.Dinter.utils.Utils.convertBackslashToForward;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.example.Dinter.R;
 import com.example.Dinter.models.ConversationModel;
+import com.example.Dinter.models.UserModel;
+import com.example.Dinter.utils.Constants;
+import com.example.Dinter.utils.Utils;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
 
@@ -22,7 +29,7 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
     // Create a static class that holds the references to the views in your layout
     static private class ViewHolder {
         ShapeableImageView avatar;
-        TextView username, newMessage , timeSent;
+        TextView username, newMessage , timeSent, conversationId;
     }
 
     @NonNull
@@ -44,6 +51,7 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
             holder.newMessage = convertView.findViewById(R.id.newMessage);
             holder.username = convertView.findViewById(R.id.username);
             holder.timeSent = convertView.findViewById(R.id.timeSent);
+            holder.conversationId = convertView.findViewById(R.id.conversationId);
 
             // Set the holder object as a tag for the view
             convertView.setTag(holder);
@@ -55,8 +63,21 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
         // Set the image and name for the views using the holder object
         assert conversationModel != null;
 
-        holder.username.setText(conversationModel.getMembers().get(1).getUsername());
-        holder.newMessage.setText(conversationModel.getNewMessage().getMessage());
+        if(Objects.equals(conversationModel.getMembers().get(1).get_id(), UserModel.currentUser.getId())){
+            holder.username.setText(conversationModel.getMembers().get(0).getUsername());
+        } else{
+            holder.username.setText(conversationModel.getMembers().get(1).getUsername());
+        }
+        if(UserModel.currentUser.getId() == conversationModel.getNewMessage().getSenderId()){
+            holder.newMessage.setText("me: " + conversationModel.getNewMessage().getMessage());
+        } else{
+            holder.newMessage.setText("to me: " + conversationModel.getNewMessage().getMessage());
+        }
+        holder.conversationId.setText(conversationModel.get_id());
+        holder.timeSent.setText(Utils.formatDateTime(conversationModel.getUpdatedAt()));
+        Picasso.get()
+                .load(Constants.BACK_END_HOST + convertBackslashToForward(conversationModel.getMembers().get(1).getAvatar()))
+                .into(holder.avatar);
 
         // Return the view
         return convertView;

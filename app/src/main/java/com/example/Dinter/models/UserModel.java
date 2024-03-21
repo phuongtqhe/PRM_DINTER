@@ -11,6 +11,7 @@ public class UserModel {
     private String password;
     private Date createdAt;
     private Date updatedAt;
+    private Date dateOfBirth;
     private int __v;
     private String username;
     private String avatar;
@@ -18,6 +19,14 @@ public class UserModel {
     private String gender;
     private List<HobbyModel> hobbies;
     private String bio;
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 
     public String getId() {
         return id;
