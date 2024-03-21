@@ -87,7 +87,7 @@ public class ConversationAdapter extends ArrayAdapter<ConversationModel> {
         holder.imageAvatar.setText(receiverUser.getAvatar());
         holder.timeSent.setText(Utils.formatDateTime(conversationModel.getUpdatedAt()));
         Picasso.get()
-                .load(Constants.BACK_END_HOST + convertBackslashToForward(receiverUser.getAvatar()))
+                .load(Constants.BACK_END_HOST_IMG + convertBackslashToForward(receiverUser.getAvatar()))
                 .into(holder.avatar);
 
         // Return the view

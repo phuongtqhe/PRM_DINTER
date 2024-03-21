@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 //        bio_text.setText(UserModel.currentUser.getBio().toString());
 
         Picasso.get()
-                .load(Constants.BACK_END_HOST + convertBackslashToForward(UserModel.currentUser.getAvatar()))
+                .load(Constants.BACK_END_HOST_IMG + convertBackslashToForward(UserModel.currentUser.getAvatar()))
                 .into(avatar);
         apiCall = new ConversationApi();
         apiCall.getAllConversation(new ApiCallback() {

@@ -59,7 +59,7 @@ public class UserAdapter extends ArrayAdapter<UserModel> {
         assert userModel != null;
         holder.username.setText(userModel.getUsername());
         Picasso.get()
-                .load(Constants.BACK_END_HOST + convertBackslashToForward(userModel.getAvatar()))
+                .load(Constants.BACK_END_HOST_IMG + convertBackslashToForward(userModel.getAvatar()))
                 .into(holder.avatar);
 
         // Return the view
