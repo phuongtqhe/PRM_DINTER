@@ -16,6 +16,7 @@ import com.example.Dinter.R;
 import com.example.Dinter.apiHandlers.ApiService;
 import com.example.Dinter.apiHandlers.RetrofitClient;
 import com.example.Dinter.models.UserModel;
+import com.example.Dinter.utils.Constants;
 import com.google.gson.Gson;
 
 import org.json.JSONObject;
@@ -38,7 +39,7 @@ public class Login extends AppCompatActivity {
     public static Socket mSocket;
     {
         try {
-            mSocket = IO.socket("http://10.0.2.2:3002");
+            mSocket = IO.socket(Constants.SOCKET_HOST);
         } catch (URISyntaxException e) {}
     }
     @Override
@@ -95,7 +96,7 @@ public class Login extends AppCompatActivity {
                     String errorMessage;
                     try {
                         errorMessage = new JSONObject(response.errorBody().string()).getString("message");
-                        Toast.makeText(Login.this, errorMessage, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "baiaiaia" + errorMessage, Toast.LENGTH_SHORT).show();
                     } catch(Exception e) {
                         Toast.makeText(Login.this, "Error " + e.toString(), Toast.LENGTH_SHORT).show();
                     }

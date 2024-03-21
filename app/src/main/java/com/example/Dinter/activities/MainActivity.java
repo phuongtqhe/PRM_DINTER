@@ -104,8 +104,12 @@ public class MainActivity extends AppCompatActivity {
     private void initAction(){
         username.setText(UserModel.currentUser.getUsername());
         email.setText(UserModel.currentUser.getEmail());
-        dob_text.setText(UserModel.currentUser.getDateOfBirth().toString());
-        bio_text.setText(UserModel.currentUser.getBio().toString());
+        if(UserModel.currentUser.getDateOfBirth() != null) {
+            dob_text.setText(UserModel.currentUser.getDateOfBirth().toString());
+        }
+        if(UserModel.currentUser.getBio() != null) {
+            bio_text.setText(UserModel.currentUser.getBio().toString());
+        }
 
         Picasso.get()
                 .load(Constants.BACK_END_HOST + convertBackslashToForward(UserModel.currentUser.getAvatar()))
@@ -242,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToChatBox(View view){
         Intent intent = new Intent(view.getContext(), BoxChatActivity.class);
+        System.out.println("Lam test ==================== " + ((TextView)view.findViewById(R.id.conversationId)).getText());
         intent.putExtra("conversationId", ((TextView)view.findViewById(R.id.conversationId)).getText() ); // Replace with actual parameter name and value
         startActivity(intent);
     }
