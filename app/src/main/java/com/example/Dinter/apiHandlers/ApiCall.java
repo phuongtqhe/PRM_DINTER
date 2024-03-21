@@ -29,7 +29,7 @@ public class ApiCall {
             // Other configurations (if any)
             .build();
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3008/api/v1/")
+            .baseUrl("http://192.168.31.137:3008/api/v1/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build();

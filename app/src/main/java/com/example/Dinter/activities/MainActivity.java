@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.profile).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, UserDetailActivity.class)));
         initDefine();
         initAction();
     }
@@ -104,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
     private void initAction(){
         username.setText(UserModel.currentUser.getUsername());
         email.setText(UserModel.currentUser.getEmail());
-        dob_text.setText(UserModel.currentUser.getDateOfBirth().toString());
-        bio_text.setText(UserModel.currentUser.getBio().toString());
+//        dob_text.setText(UserModel.currentUser.getDateOfBirth().toString());
+//        bio_text.setText(UserModel.currentUser.getBio().toString());
 
         Picasso.get()
                 .load(Constants.BACK_END_HOST + convertBackslashToForward(UserModel.currentUser.getAvatar()))
