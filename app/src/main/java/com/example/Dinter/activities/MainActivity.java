@@ -243,7 +243,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToChatBox(View view){
         Intent intent = new Intent(view.getContext(), BoxChatActivity.class);
-        intent.putExtra("conversationId", ((TextView)view.findViewById(R.id.conversationId)).getText() ); // Replace with actual parameter name and value
+        System.out.println("Lam test ==================== " + ((TextView)view.findViewById(R.id.conversationId)).getText());
+        intent.putExtra("conversationId", ((TextView)view.findViewById(R.id.conversationId)).getText() );
+        intent.putExtra("username", ((TextView)view.findViewById(R.id.username)).getText() );
+        intent.putExtra("imgAvatar", ((TextView)view.findViewById(R.id.imageAvatar)).getText() );// Replace with actual parameter name and value
         startActivity(intent);
     }
 

@@ -50,12 +50,17 @@ public class BoxChatActivity extends AppCompatActivity {
     ImageView back_icon;
     Socket mSocket = Login.mSocket;
     String conversationId;
+
+    private UserModel currentUser = new UserModel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_box_chat);
         Intent intent = getIntent();
-        conversationId = intent.getStringExtra("conversationId"); // Replace with actual
+        conversationId = intent.getStringExtra("conversationId");
+        String usernameIntent = intent.getStringExtra("username");
+        String imgAvatar = intent.getStringExtra("imgAvatar");
+        // Replace with actual
         Log.d("dsa", conversationId);
 
         edtMessage = findViewById(R.id.edt_message);
@@ -68,12 +73,15 @@ public class BoxChatActivity extends AppCompatActivity {
         System.out.println("UserId: " + user.getId());
         username = findViewById(R.id.mesUsername);
         back_icon= findViewById(R.id.back_icon);
-        username.setText(user.getUsername());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         messageRecycle.setLayoutManager(linearLayoutManager);
         mListMessage = new ArrayList<>();
         messageAdapter = new MessageAdapter();
-        getMessage();
+        System.out.println(imgAvatar);
+        String convertImg = imgAvatar.replace("\\","/");
+        getMessage(convertImg);
+        username.setText(usernameIntent);
+
         mSocket.on("getMessage", onNewMessage);
         btnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +126,7 @@ public class BoxChatActivity extends AppCompatActivity {
         });
     }
 
-    private void getMessage(){
+    private void getMessage(String avatar){
         ApiService apiService = RetrofitClient.getApiService();
         System.out.println("conversationId =============== " + conversationId);
         Call<List<Message>> call = apiService.getMessage(conversationId);
@@ -137,7 +145,7 @@ public class BoxChatActivity extends AppCompatActivity {
                     Gson gson = new Gson();
                     System.out.println("");
                     System.out.println("list size" + mListMessage.size());
-                    messageAdapter.setData(mListMessage, user.getId());
+                    messageAdapter.setData(mListMessage, user.getId(), avatar);
                     messageRecycle.setAdapter(messageAdapter);
                     messageRecycle.scrollToPosition(mListMessage.size() - 1);
                 }
@@ -149,6 +157,24 @@ public class BoxChatActivity extends AppCompatActivity {
             }
         });
     }
+
+//    private void getUserInfo(String id){
+//        System.out.println("ID: " + id);
+//        ApiService apiService = RetrofitClient.getApiService();
+//        Call<UserModel.Login> call = apiService.getUserInfo(id);
+//        call.enqueue(new Callback<UserModel.Login>() {
+//            @Override
+//            public void onResponse(Call<UserModel.Login> call, Response<UserModel.Login> response) {
+//                currentUser = response.body();
+//                System.out.println("currentId: " + currentUser.getUsername());
+//            }
+//
+//            @Override
+//            public void onFailure(Call<UserModel.Login> call, Throwable t) {
+//
+//            }
+//        });
+//    }
 
     private Emitter.Listener onNewMessage = new Emitter.Listener() {
         @Override

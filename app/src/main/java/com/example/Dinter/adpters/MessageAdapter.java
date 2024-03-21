@@ -21,9 +21,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     private static final int ITEM_LEFT = 1;
     private static final int ITEM_RIGHT  = 2;
     private String userId;
-    public void setData(List<Message> list, String userId){
+    private String avatar;
+    public void setData(List<Message> list, String userId, String avatar){
         this.mListMessage = list;
         this.userId = userId;
+        this.avatar = avatar;
         notifyDataSetChanged();
     }
 
@@ -44,8 +46,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
                 return new RightChatViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_right,parent,false));
         }
         return null;
-//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_message_recycle_row, parent, false);
-//        return new MessageViewHolder(view);
     }
 
     @Override
@@ -57,8 +57,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         if(holder.getItemViewType() == ITEM_LEFT){
             LeftChatViewHolder viewHolder = (LeftChatViewHolder) holder;
             viewHolder.contents.setText(message.getText());
+//            System.out.println(Constants.BACK_END_HOST_IMG + avatar);
             Picasso.get()
-                    .load(Constants.BACK_END_HOST + "public/images/users/image-1710685025286428629554_967182891430771_6571424009725047858_n.jpg")
+                    .load(Constants.BACK_END_HOST_IMG + avatar)
                     .into(viewHolder.imgView);
         }else{
             RightChatViewHolder viewHolder = (RightChatViewHolder) holder;
